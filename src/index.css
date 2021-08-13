@@ -1,5 +1,20 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+html{
+  widows: 100vw;
+  height: 100vh;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  background: url("../src/assets/rainbow.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position:center;
+  width: 100%;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +22,428 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.apptitle{
+  font-size: 1.5rem;
+  letter-spacing: .01rem;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  font-family:sans-serif;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.wrap{
+  margin-top: 7%;
+  padding: 2%;
+  position: fixed;
+  width: 35vw;
+  height: 70vh;
+  margin-left: 30%;
+  margin-right: 30%;
+  overflow: hidden;
+
+  background-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  border-radius: 10px;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.searchBar{
+  margin-top: 2%;
+  margin-bottom: .5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.searchTerm{
+   /* display: block; */
+   min-width: 25vw;
+   height: 4.5vh;
+   padding: .8rem;
+   font-size: 1.2rem;
+   line-height: 1.42857143;
+   margin-top: .5rem;
+   color: rgb(58, 57, 57);
+   background-color: #fff;
+   background-image: none;
+   border: 0.1rem solid #ccc;
+   border-bottom-left-radius: 0.5rem;
+   border-top-left-radius: 0.5rem;
+   -webkit-box-shadow: inset 0 0.1rem 0.1rem rgb(0 0 0 / 8%);
+   box-shadow: inset 0 0.1rem 0.1rem rgb(0 0 0 / 8%);
+   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.searchTerm,
+.searchTerm:focus,
+.searchTerm:active,
+.searchTerm:active:focus {
+  border: none;
+  outline: none;
+}
+.searchTerm {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.searchTerm:focus {
+  -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+
+.searchBtn{
+  min-height: 4.7vh;
+  width: 7vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+  border-color: black;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+.widget{
+  height: 25vh;
+}
+.weatherIcon{
+  height: 20vh;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 6rem;
+  color:white;
+}
+.tempTime{
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.temp{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+  font-size: 3rem;
+  font-weight: 500;
+  padding-left: 1rem;
+  height: 20vh;
+  width: 10vw;
+}
+.description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 13vw;
+  margin-left: 9%;
+}
+.weatherCondition{
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.place{
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.time{
+  color:black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  height: 20vh;
+  width: 12vw;
+}
+.otherdetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 12vh;
+  width: 35vw;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.sunset{
+  display: flex;
+  flex-direction: row;
+  padding: .4rem;
+  font-weight: 500;
+}
+.humidity{
+  display: flex;
+  flex-direction: row;
+  padding: .4rem;
+  font-weight: 500;
+}
+.pressure{
+  display: flex;
+  flex-direction: row;
+  padding: .4rem;
+  font-weight: 500;
+}
+.wind{
+  display: flex;
+  flex-direction: row;
+  padding: .4rem;
+  font-weight: 500;
+}
+.otherdetails i{
+  color:black;
+  padding-top: .8rem;
+  padding-right: .9rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width:520px){
+  .wrap{
+   margin-left: 3%;
+   margin-right: 3%;
+    width: 90%;
+    height: 90%;
+  }
+  .apptitle{
+    font-size: 1.2rem;
+    color: black;
+    margin-top: 1.3%;
+  }
+  .searchTerm{
+    width: 60%;
+    font-size: 0.9rem;
+  }
+  .searchBtn{
+    width: 25%;
+    font-size: 0.9rem;
+  }
+  .searchBar{
+    width: 90%;
+    margin-left: 11%;
+    margin-right: 10%;
+  }
+  .tempTime{
+    height: 23%;
+    justify-content: space-between;
+  }
+  .temp{
+    width: 30%;
+    margin-left: 13%;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .description{
+    display: flex;
+    width: 50%;
+    margin-left: 15%;
+  }
+  .weatherCondition{ 
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .place{
+    font-size: .8rem;
+    font-weight: 500;
+  }
+  .time{
+    display: none;
+  }
+
+  .widget{
+    height: 34%;
+  }
+  .weatherIcon{
+    height: 90%;
+    font-size: 6.5rem;
+  }
+  .otherdetails{
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 50%;
+    width: 100%;
+    margin-top: 2%;
+    padding-bottom: 2%;
+    height: 28%;
+  }
+  .otherdetails i{
+    font-size: 1.2rem;
+  }
+  .sunset{
+    margin-left: 10%;
+  }
+  .humidity{
+    margin-right: 10%;
+  }
+  .pressure{
+    margin-left: 10%;
+    padding-top: 0%;
+  }
+  .wind{
+    margin-right: 10%;
+    padding-top: 0%;
+  }
+
+}
+
+@media screen and (min-width:800px) and (max-width:1350px){
+  .wrap{
+   margin-left: 3%;
+   margin-right: 3%;
+   width: 90%;
+   height: 85%;
+  }
+  .apptitle{
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 1.3%;
+  }
+  .searchTerm{
+    width: 60%;
+    font-size: 1.7rem;
+  }
+  .searchBtn{
+    width: 25%;
+    font-size: 1.8rem;
+  }
+  .searchBar{
+    width: 90%;
+    margin-left: 11%;
+    margin-right: 10%;
+  }
+  .tempTime{
+    height: 22%;
+    justify-content: space-between;
+  }
+  .temp{
+    width: 30%;
+    margin-left: 8%;
+    margin-right: 5%;
+    font-size: 4.5rem;
+    font-weight: 500;
+  }
+  .description{
+    display: flex;
+    margin-left: 6%;
+    width: 50%;
+  }
+  .weatherCondition{ 
+    font-size: 2.8rem;
+    font-weight: 500;
+  }
+  .place{
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .time{
+    font-size: 2rem;
+    margin-right: 2%;
+    width: 50%;
+  }
+
+  .widget{
+    height: 45%;
+  }
+  .weatherIcon{
+    height: 90%;
+    font-size: 11rem;
+  }
+  .otherdetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2%;
+    height: 15%;
+  }
+  .otherdetails i{
+    font-size: 2rem;
+  }
+  .sunset{
+    padding: 1.5rem;
+  }
+  .humidity{
+    padding: 1.5rem;
+  }
+  .pressure{
+    padding: 1.5rem;
+  }
+  .wind{
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (min-width:520px) and (max-width:800px){
+  .wrap{
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 90%;
+    height: 85%;
+   }
+   .searchTerm{
+    width: 60%;
+    font-size: 1.4rem;
+  }
+  .searchBtn{
+    width: 25%;
+    font-size: 1.5rem;
+  }
+  .searchBar{
+    width: 90%;
+    margin-left: 11%;
+    margin-right: 10%;
+  }
+  .time{
+    display: none;
+  }
+  .temp{
+    margin-left: 22%;
+  }
+  .description{
+    margin-left: 28%;
+  }
+  .otherdetails{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 2%;
+    height: 15%;
+  }
+  .widget{
+    height: 48%;
+  }
+  .weatherIcon{
+    height: 90%;
+    font-size: 11rem;
+  }
+  .sunset{
+    margin-top: 1.5rem;
+  }
+  .humidity{
+    margin-top: 1.5rem;  
+  }
+  .pressure{
+    margin-top: 1.5rem;  
+  }
+  .wind{
+    margin-top: 1.5rem;  
+  }
+}
+
+
