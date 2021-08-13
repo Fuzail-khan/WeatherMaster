@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/WeatherMaster/static/css/main.878437b9.chunk.css",
+    "main.js": "/WeatherMaster/static/js/main.473c9f67.chunk.js",
+    "main.js.map": "/WeatherMaster/static/js/main.473c9f67.chunk.js.map",
+    "runtime-main.js": "/WeatherMaster/static/js/runtime-main.0d87fa79.js",
+    "runtime-main.js.map": "/WeatherMaster/static/js/runtime-main.0d87fa79.js.map",
+    "static/js/2.7eda0d87.chunk.js": "/WeatherMaster/static/js/2.7eda0d87.chunk.js",
+    "static/js/2.7eda0d87.chunk.js.map": "/WeatherMaster/static/js/2.7eda0d87.chunk.js.map",
+    "index.html": "/WeatherMaster/index.html",
+    "static/css/main.878437b9.chunk.css.map": "/WeatherMaster/static/css/main.878437b9.chunk.css.map",
+    "static/js/2.7eda0d87.chunk.js.LICENSE.txt": "/WeatherMaster/static/js/2.7eda0d87.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/WeatherMaster/static/media/rainbow.24eb21eb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d87fa79.js",
+    "static/js/2.7eda0d87.chunk.js",
+    "static/css/main.878437b9.chunk.css",
+    "static/js/main.473c9f67.chunk.js"
+  ]
+}
